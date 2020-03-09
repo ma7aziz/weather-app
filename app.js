@@ -30,7 +30,10 @@ const updateUI = (data) => {
     }
 
 
-body.onload = getLocation()
+body.onload = ()=>{
+    getLocation()
+    
+} 
         
 cityForm.addEventListener('submit', e => {
     e.preventDefault()
