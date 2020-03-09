@@ -46,7 +46,11 @@ const getLocation = async () => {
         }
         icon.setAttribute('src', `img/icons/${weather.WeatherIcon}.svg`) 
         });
+    } else {
+        const card = document.querySelector('.card')
+        card.classList.remove('d-none')
+        card.textContent = 'Locating....'
     }
 
-    
+
 }
