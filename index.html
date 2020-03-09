@@ -9,7 +9,7 @@
 </head>
 <style>
     body{
-        background: #fff;
+      background-image: linear-gradient(to right top, #376a74, #2a6679, #23617e, #265a82, #335383);
         letter-spacing: 0.2em;
         font-size: 0.8em;
       }
@@ -19,11 +19,18 @@
       .card {
           background: #F8F9FA;
       }
+      .day {
+        background-image: linear-gradient(to right top, #37c5e3, #56c7ee, #72c8f7, #8dc8fc, #a5c9ff);
+      }
+
+      .night {
+        background-image: linear-gradient(to right top, #051937, #091f40, #0e264a, #132d54, #18345e);
+      }
 </style>
 <body>
 
     <div class="container my-5 mx-auto">
-        <h1 class="text-muted text-center my-4">Weather &deg;C</h1>
+        <h1 class="text-light text-center my-4">Weather &deg;C</h1>
     
         <form class="change-location my-4 text-center text-muted">
           <label for="city">Enter a location for weather information</label>
@@ -31,9 +38,8 @@
         </form>
         
         <div class="card shadow-lg rounded  d-none">
-          <img src="https://via.placeholder.com/400x300" class="time card-img-top">
           <div class="icon bg-light mx-auto text-center">
-                <img src="" alt="">
+              <img src="" alt="">
           </div>
           <div class="text-muted text-uppercase text-center details">
             <h5 class="my-3">City name</h5>
@@ -47,6 +53,10 @@
         
       </div> 
   
+      <div class="cuurent">
+        
+      </div>
+      <script src="./new.js"></script>
   <script src="forecast.js"></script>
   <script src="app.js"></script>
 </body>
