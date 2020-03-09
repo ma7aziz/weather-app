@@ -1,4 +1,4 @@
-const key = 'rVcBAMA6AxmA86BsCth4OxHwoxmLQ0GI'
+const key = 'Os7fXkCsP8EhiRrkFju92SMpZvd248fZ'
 
 // get city data
 const getCity = async (city) => {
@@ -26,11 +26,14 @@ const getLocation = async () => {
         const long = position.coords.longitude
         const response = await fetch(`https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${key}&q=${lat},${long}`)
         const data = await response.json()
+        console.log(data);
         const citykey = await data.Key
         const cityEng = await data.EnglishName
         const country = await data.Country.ID
         const weatherRes = await fetch(`https://dataservice.accuweather.com/currentconditions/v1/${citykey}?apikey=${key}`)
         const weatherData = await weatherRes.json()
+        console.log(weatherData);
+        
         const weather = await weatherData[0]
         const temp = await weather.Temperature.Metric.Value
         const DayTime = await weather.IsDayTime
