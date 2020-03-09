@@ -30,11 +30,6 @@ const updateUI = (data) => {
     }
 
 
-
-// window.addEventListener('load',()=>{
-//     getLocation()
-
-//     })
 body.onload = getLocation()
         
 cityForm.addEventListener('submit', e => {
